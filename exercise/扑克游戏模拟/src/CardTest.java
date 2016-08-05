@@ -9,8 +9,12 @@ public class CardTest {
 		item.addPlayer("James Joyce");
 		item.initPlayerCards();
 		item.deliverCard("xll");
-		for (int i = 0; i < item.getPlayerNum(); i++) {
-			item.showPlayerCards(item.getPlayerName(i));
+		try{
+			for (int i = 0; i < item.getPlayerNum(); i++) {
+				item.showPlayerCards(item.getPlayerName(i));
+			}
+		}catch(IndexOutOfBoundsException ex){
+			System.out.println("数组越界！");
 		}
 	}
 }

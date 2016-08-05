@@ -28,7 +28,7 @@ public class GameManger {
 		return _instance;
 	}
 
-	public String getPlayerName(int index) {
+	public String getPlayerName(int index) throws IndexOutOfBoundsException{
 		return players.get(index);
 	}
 
